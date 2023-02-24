@@ -1,70 +1,70 @@
 package com.StudentManagementSystem.models;
 
 public class Admin {
-	private int Admin_id;
-	private String FirstName;
-	private String LastName;
-	private String UserName;
-	private String Password;
-	private long Mobile;
-	private String Address;
-	public Admin(int admin_id, String firstName, String lastName, String userName, String password, long mobile,
-			String address) {
-		super();
-		Admin_id = admin_id;
-		FirstName = firstName;
-		LastName = lastName;
-		UserName = userName;
-		Password = password;
-		Mobile = mobile;
-		Address = address;
+	private int aid;
+	private String name;
+	private String mobile;
+	private String address;
+	private String email;
+	private String password;
+	
+	public Admin() {
+		
 	}
-	public int getAdmin_id() {
-		return Admin_id;
+
+	public int getAid() {
+		return aid;
 	}
-	public void setAdmin_id(int admin_id) {
-		Admin_id = admin_id;
+
+	public void setAid(int aid) {
+		this.aid = aid;
 	}
-	public String getFirstName() {
-		return FirstName;
+
+	public String getName() {
+		return name;
 	}
-	public void setFirstName(String firstName) {
-		FirstName = firstName;
+
+	public void setName(String name) {
+		this.name = name;
 	}
-	public String getLastName() {
-		return LastName;
+
+	public String getMobile() {
+		return mobile;
 	}
-	public void setLastName(String lastName) {
-		LastName = lastName;
+
+	public void setMobile(String mobile) {
+		this.mobile = mobile;
 	}
-	public String getUserName() {
-		return UserName;
-	}
-	public void setUserName(String userName) {
-		UserName = userName;
-	}
-	public String getPassword() {
-		return Password;
-	}
-	public void setPassword(String password) {
-		Password = password;
-	}
-	public long getMobile() {
-		return Mobile;
-	}
-	public void setMobile(long mobile) {
-		Mobile = mobile;
-	}
+
 	public String getAddress() {
-		return Address;
+		return address;
 	}
+
 	public void setAddress(String address) {
-		Address = address;
+		this.address = address;
 	}
+
+	public String getEmail() {
+		return email;
+	}
+
+	public void setEmail(String email) {
+		this.email = email;
+	}
+
+	public String getPassword() {
+		return password;
+	}
+
+	public void setPassword(String password) {
+		this.password = password;
+	}
+
 	@Override
 	public String toString() {
-		return "Admin [Admin_id=" + Admin_id + ", FirstName=" + FirstName + ", LastName=" + LastName + ", UserName="
-				+ UserName + ", Password=" + Password + ", Mobile=" + Mobile + ", Address=" + Address + "]";
+		return "Admin [aid=" + aid + ", name=" + name + ", mobile=" + mobile + ", address=" + address + ", email="
+				+ email + ", password=" + password + "]";
 	}
 	
 }
+

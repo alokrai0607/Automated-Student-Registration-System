@@ -11,22 +11,39 @@ import com.StudentManagementSystem.models.Student;
 
 public interface AdminDao {
 	
-	public boolean adminLogIn(String userName, String password) throws AdminException;
-
-	public String insertNewCourse(Course course) throws CourseException;
+	public boolean adminLogIn(String username, String password) throws AdminException;
 	
-	public String updateCourseFee(int c_id,int fee) throws  CourseException;
+//	1. Add a new Courses
+	public String addNewCourse(Course course) throws CourseException;
 	
-	public String deleteCourse(int c_id) throws  CourseException;
 	
-	public Course searchInformationAboutCourse(int c_id) throws  CourseException;
+//	2. Update Fees of course.
+	public String updateFeesOfCourseUsingCId(int cid, long fee) throws CourseException;
 	
-	public String createBatchUnderCourse(int c_id, String batch,int totalSeats) throws BatchException;
 	
-	public int  allocateBatchToStudent(String email ,String batchname) throws BatchException, StudentException;
+//  3. Delete  a course from any Training session.
+	public String deleteCourseUsingCId(int cid) throws CourseException;
 	
+	
+//  4. Search information about a course.
+	public Course searchInfoUsingCId(int cid) throws CourseException;
+	
+	
+//  5. Create Batch under a course.
+	public String createBatchUnderCourse(int cid, String batch, int totalSeat) throws BatchException;
+	
+	
+//  6. Allocate students in a Batch under a course.
+	public int allocateBatchToStudent(String email, String cname) throws BatchException, StudentException;
+	
+	
+//  7. Update total seats of a batch.
 	public String updateTotalSeatsInBatch(String batch, int seats) throws BatchException;
 	
-	public List<Student> veiwStudentList()  throws StudentException;
+	
+//  8. View the students of every batch. 
+	public List<Student> viewAllStudents() throws StudentException;
+
+
 
 }
