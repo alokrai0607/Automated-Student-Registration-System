@@ -63,7 +63,7 @@ public class AdminDaoImpl implements AdminDao{
 			int x = ps.executeUpdate();
 			
 			if(x>0) {
-				message = course.getCname() + "course inserted successfully in database";
+				message = course.getCname() + " course inserted successfully in database";
 			}
 			
 		} catch (SQLException e) {
@@ -77,7 +77,7 @@ public class AdminDaoImpl implements AdminDao{
 	
 	@Override
 	public String updateFeesOfCourseUsingCId(int cid, long fee) throws CourseException {
-		String message = "Fee updation failed please try again...";
+		String message = " Fee updation failed please try again...";
 		
 		try(Connection conn = DatabaseConnection.provideDbConnection()) {
 		

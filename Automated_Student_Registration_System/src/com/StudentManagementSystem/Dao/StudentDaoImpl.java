@@ -118,7 +118,7 @@ return false;
 public boolean updateMobile(String username, long newMobile) throws StudentException {
 	
 	try (Connection conn  = DatabaseConnection.provideDbConnection()){
-		PreparedStatement ps = conn.prepareStatement("update student set Studentobile = ? where StudentEmail = ?");
+		PreparedStatement ps = conn.prepareStatement("update student set Studentmobile = ? where StudentEmail = ?");
 		ps.setLong(1, newMobile);
 		ps.setString(2, username);
 		int x = ps.executeUpdate();

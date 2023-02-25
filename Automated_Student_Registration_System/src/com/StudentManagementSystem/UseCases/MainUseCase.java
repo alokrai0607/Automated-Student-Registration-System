@@ -94,6 +94,8 @@ public static void main(String[] args) {
 					String address = br.readLine();
 					System.out.print("Enter Course which u want : ");
 					String cname = br.readLine();
+					System.out.print("Enter Course Start Date : ");
+					String cdate = br.readLine();
 					
 					//create student object
 					Student st = new Student(name, email, password, mobile, address, cname);
@@ -243,10 +245,9 @@ public static void main(String[] args) {
 				System.out.print("Enter Total Seats : ");
 				int tSeat = Integer.parseInt(br.readLine());
 				System.out.print("Enter Available Seats : ");
-				int aSeat = Integer.parseInt(br.readLine());
-				
+				int aSeat = Integer.parseInt(br.readLine());			
 				//create course object
-				Course courses = new Course(cid,cname, cfee, cDuration, cdate, tSeat, aSeat);
+				Course courses = new Course(cid,cname, cfee, cDuration, cdate,tSeat,aSeat);
 				try {
 					System.out.println(dao.addNewCourse(courses));
 					System.out.println("\n\n");
@@ -320,7 +321,7 @@ public static void main(String[] args) {
 				try {
 					System.out.println(dao.searchInfoUsingCId(cid));
 				} catch (CourseException e) {
-					System.out.println(e.getMessage());;
+					System.out.println(e.getMessage());
 				}
 				
 			} catch (InputMismatchException e) {
@@ -334,12 +335,24 @@ public static void main(String[] args) {
 		//********************************************************************************
 		
 		case 5:
+			System.out.println("You have selected : Create Batch under a course Using Course Id ");
 			try {
-				System.out.println("case 5 work is pending");
+				System.out.print("Enter Course Id : ");
+				int cid = Integer.parseInt(br.readLine());
+				
+				try {
+					System.out.println(dao.searchInfoUsingCId(cid));
+				} catch (CourseException e) {
+					// TODO: handle exception
+					System.out.println(e.getMessage());
+				}
+				
 			} catch (Exception e) {
-				System.out.println(e.getMessage());
+				System.out.println("Oop's invalid input");
 			}
 			
+			System.out.println("*********************************************************************************\n\n");
+			adminWork();
 			break;
 			
 		//********************************************************************************
@@ -486,7 +499,7 @@ public static void main(String[] args) {
 			try {
 				System.out.print("Enter Username (Email id is a your username) : ");
 				String username = br.readLine();
-				System.out.print("Enter New Password : ");
+				System.out.print("Enter New Mobile No : ");
 				long mobile = Long.parseLong(br.readLine());
 				try {
 					if(dao.updateMobile(username, mobile)) {
@@ -519,12 +532,12 @@ public static void main(String[] args) {
 			try {
 				System.out.print("Enter Username (Email id is a your username) : ");
 				String username= br.readLine();;
-				System.out.print("Enter New Password :");
+				System.out.print("Enter New Address :");
 				String address= br.readLine();
 				try {
 					if(dao.updateAddress(username, address)) {
 						System.out.println("Address updated Successfully...");
-						System.out.println("Your new password is : "+ address);
+						System.out.println("Your new Address is : "+ address);
 					}
 					else {
 						System.out.println("Something went wrong. Please kindly check your username ");
