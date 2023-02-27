@@ -35,9 +35,9 @@
 
  <h5>The ER-Diagram is shown below :</h5>
 
-![project er diagram]("https://drive.google.com/file/d/1KCfN5p7kg6sLKjK3GhiCWDt7VaxqrXAY/view?usp=sharing")
+[project er diagram]("https://drive.google.com/file/d/1KCfN5p7kg6sLKjK3GhiCWDt7VaxqrXAY/view?usp=sharing")
 
-<img src="https://www.shutterstock.com/image-photo/close-photo-computer-screen-sql-structured-2169190253">
+<img src="https://www.shutterstock.com/image-photo/close-photo-computer-screen-sql-structured-2169190253"/>
 
 //**************************************************My SQL Database Query*****************************************************************//
 
