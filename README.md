@@ -37,6 +37,7 @@
 
 ![project er diagram]("https://www.shutterstock.com/image-illustration/sql-code-on-dark-background-word-1897996366")
 
+<img src="https://www.shutterstock.com/image-illustration/sql-code-on-dark-background-word-1897996366">
 
 //**************************************************My SQL Database Query*****************************************************************//
 
