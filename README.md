@@ -1,5 +1,7 @@
 # Automated Student Registration System
 
+<img src="https://www.shutterstock.com/image-vector/vector-horizontal-banner-concept-learning-260nw-689761090.jpg">
+
 ### Problem Description :
 <p> In an Educational Institute, every year technology training is conducted during the summer and winter seasons. Students are enrolled in different courses under different technology tracks like- Android, Java, JEE, PHP, Oracle, etc. This automated application help Institute to enroll students efficiently, create batches under a course, and allocates the students in a batch. </p>
 
