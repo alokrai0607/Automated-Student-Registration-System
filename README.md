@@ -44,18 +44,13 @@
 //***************************************************************Create Database Here***************************************************************************************//
 
 mysql> create database Student_Management_System;
-Query OK, 1 row affected (0.03 sec)
 
 //***************************************************************Use Database Here***************************************************************************************//
 
 mysql> use Student_management_system;
-Database changed
 
 //***************************************************************Show All tables under the Database***************************************************************************************//
 mysql> show tables;
-Empty set (0.02 sec)
-
-
 //***************************************************************Make Admin table Here***************************************************************************************//
 1) Admin Table : 
 
@@ -67,7 +62,6 @@ mysql> create table admin(
          AdminEmail varchar(40) not null unique,
          AdminPassword varchar(40) not null
      );
-Query OK, 0 rows affected (0.18 sec)
 
 //***************************************************************check Admin table Here***************************************************************************************//
 
@@ -82,7 +76,6 @@ mysql> desc admin;
 | AdminEmail    | varchar(40) | NO   | UNI | NULL    |                |
 | AdminPassword | varchar(40) | NO   |     | NULL    |                |
 +---------------+-------------+------+-----+---------+----------------+
-6 rows in set (0.01 sec)
 
 //***************************************************************Hardcode for ragister Admin Here***************************************************************************************//
 
@@ -90,11 +83,9 @@ mysql> desc admin;
 
 mysql> insert into admin (AdminId, AdminName, AdminMobile, AdminAddress, AdminEmail, AdminPassword) values
 (1, "Admin1", "1234567890", "Latur", "a1@gmail.com", "admin1");
-Query OK, 1 row affected (0.03 sec)
 
 mysql> insert into admin (AdminId, AdminName, AdminMobile, AdminAddress, AdminEmail, AdminPassword) values
 (2, "Alok", "9044414580", "Varanasi", "saelalok001@gmail.com", "!@2614@lok");
-Query OK, 1 row affected (0.03 sec)
 
 
 /************************************************************************Show Admin table Here***************************************************************************************//
@@ -106,7 +97,6 @@ mysql> select * from admin;
 |       1 | Admin1    | 1234567890  | Latur        | a1@gmail.com          | admin1        |
 |       2 | Alok      | 9044414580  | Varanasi     | saelalok001@gmail.com | !@2614@lok    |
 +---------+-----------+-------------+--------------+-----------------------+---------------+
-2 rows in set (0.01 sec)
 
 /******************************************************************create student  table Here***************************************************************************************//
 
@@ -122,7 +112,6 @@ mysql> create table student(
          StudentBatch varchar(50),
          StudentAdmissionDate varchar(15)
      );
-Query OK, 0 rows affected (0.03 sec)
 
 /******************************************************************Show  student  table Here***************************************************************************************//
 
@@ -139,7 +128,6 @@ mysql> desc student;
 | StudentBatch         | varchar(50) | YES  |     | NULL    |                |
 | StudentAdmissionDate | varchar(15) | YES  |     | NULL    |                |
 +----------------------+-------------+------+-----+---------+----------------+
-8 rows in set (0.00 sec)
 
 /******************************************************************Create Course  table Here***************************************************************************************//
 
@@ -154,7 +142,6 @@ mysql> create table course(
          TotalSeat  int ,
           AvilableSeat int
         );
-Query OK, 0 rows affected (0.02 sec)
 
 /******************************************************************Show  Course desc  Here***************************************************************************************//
 
@@ -170,11 +157,8 @@ mysql> desc course;
 | TotalSeat      | int         | YES  |     | NULL    |                |
 | AvilableSeat   | int         | YES  |     | NULL    |                |
 +----------------+-------------+------+-----+---------+----------------+
-7 rows in set (0.00 sec)
 
 /******************************************************Create Many to Many Relationships for Student, Course Table******************************************************//
-
-
 
 4) Many to Many Relationship for Student, Course Table :
 
@@ -184,7 +168,6 @@ mysql> create table student_course(
          foreign key(CourseId) references course(CourseId),
          foreign key(StudentRoll) references student(StudentRoll)
      );
-Query OK, 0 rows affected (0.04 sec)
 
 /**************************************************************************desc for  student_course****************************************************************************//
 
@@ -196,5 +179,4 @@ mysql> desc student_course;
 | StudentRoll | int  | YES  | MUL | NULL    |       |
 | CourseId    | int  | YES  | MUL | NULL    |       |
 +-------------+------+------+-----+---------+-------+
-2 rows in set (0.00 sec)
 
