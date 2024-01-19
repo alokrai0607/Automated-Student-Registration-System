@@ -16,7 +16,7 @@
 1. Add a new Course 
 2. Update Fees of course
 3. Delete a course from any Training session
-0. Log Out from Admin
+0. Log Out from Admin Section
 ```
 
 #### Roles for Students  :
@@ -24,6 +24,7 @@
 1. Register himself in a course  
 2. To update these details
 3. Get all the courses
+0. Log Out from Student Section
 ```
 #### Explanation video link :
  <h3 align="center"><a href="https://drive.google.com/file/d/1iIdLZccGGYRsuusu9bvhrbZAcDJkF6c7/view?usp=sharing"><strong>Want to see live Explanation »</strong></a></h3>
