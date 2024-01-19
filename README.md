@@ -16,12 +16,7 @@
 1. Add a new Course 
 2. Update Fees of course
 3. Delete a course from any Training session
-4. Search for information about a course
-5. Create a Batch under a course
-6. Add a student to a batch
-7. View all the students
-8. View the students of every batch
-9. View all the course details
+0. Log Out from Admin
 ```
 
 #### Roles for Students  :
